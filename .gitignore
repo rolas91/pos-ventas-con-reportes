@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Deploy CapRover (build local)
+deploy.tar
+deploy.tar.gz

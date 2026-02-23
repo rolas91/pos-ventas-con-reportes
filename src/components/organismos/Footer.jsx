@@ -6,17 +6,17 @@ export function Footer() {
       <section className="lock">
         <GiPadlock />
         <span>
-          Esta es una página segura de codigo369. Si tienes dudas sobre la
+          Esta es una página segura de Desoftnic. Si tienes dudas sobre la
           autenticidad de la web, comunícate con
-          <br /> nosotros al 311-9898 o a través de nuestros medios digitales.
+          <br /> nosotros al 58101483 o a través de nuestros medios digitales.
         </span>
       </section>
       <section className="derechos">
-        <span>Ada369 S.A - RUC: 20100047218</span>
+        <span>Desoftnic S.A - RUC: 00000000000</span>
         <div className="separador"></div>
         <span>Todos los derechos reservados</span>
         <div className="separador"></div>
-        <span>© 2023 codigo369.com</span>
+        <span>© 2026 desoftnic.com</span>
       </section>
     </Container>
   );

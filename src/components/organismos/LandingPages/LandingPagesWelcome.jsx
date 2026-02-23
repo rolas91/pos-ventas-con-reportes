@@ -4,9 +4,9 @@ import { CardFuncion } from "./CardFuncion";
 import { Device } from "../../../styles/breakpoints";
 import ScrollReveal from "scrollreveal";
 import { BtnLink } from "../../moleculas/BtnLink";
-import { useUsuariosStore } from "../../../store/UsuariosStore";
+import desoftnicLogo from '../../../assets/desoftnicLogo.png';
+
 export const LandingPagesWelcome = () => {
-  const {datausuarios} = useUsuariosStore()
   useEffect(() => {
     ScrollReveal().reveal(".left-section", {
       origin: "left",
@@ -35,45 +35,44 @@ export const LandingPagesWelcome = () => {
       <ContentSection>
         <SubContentSection>
           <LeftSection className="left-section">
-            <h1>POS VENTAS CON REACT.JS {datausuarios?.id} </h1>
+            <h1>Punto de venta para tu empresa</h1>
             <Step>
               <IconPlaceholder>
-                <img src="https://i.ibb.co/h19LCXP/aprendiendo.png" />
+                <img src="https://i.ibb.co/3dZfQzF/caja-registradora.png" alt="Ventas" />
               </IconPlaceholder>
               <Text>
-                <Title>Aprende desde cero</Title>
+                <Title>Vende más rápido</Title>
                 <Description>
-                  Descubre cómo crear tu sistema de postventa profesional paso a
-                  paso.
+                  Registra ventas al instante desde múltiples cajas y sucursales, con cobro por varios métodos de pago.
                 </Description>
               </Text>
             </Step>
             <Step>
               <IconPlaceholder>
-                <img src="https://i.ibb.co/RBXt8Fs/taladro-de-mano.png" />
+                <img src="https://qkzybkelsdmoezaaypou.supabase.co/storage/v1/object/public/imagenes/modulos/almacen.png" alt="Inventario" />
               </IconPlaceholder>
               <Text>
-                <Title>Domina herramientas esenciales</Title>
+                <Title>Inventario bajo control</Title>
                 <Description>
-                  Desarrolla habilidades clave en programación.
+                  Stock en tiempo real por almacén, alertas de mínimo y movimientos trazables.
                 </Description>
               </Text>
             </Step>
             <Step>
               <IconPlaceholder>
-                <img src="https://i.ibb.co/QPFxqC3/ejecutante.png" />
+                <img src="https://i.ibb.co/3vfgvTB/mujer-de-negocios.png" alt="Reportes" />
               </IconPlaceholder>
               <Text>
-                <Title>Aplica lo aprendido</Title>
+                <Title>Decisiones con datos</Title>
                 <Description>
-                  Desde la idea inicial hasta la implementación.
+                  Reportes de ventas, caja e inventario valorado para llevar tu negocio al día.
                 </Description>
               </Text>
             </Step>
-            
+
             <div style={{ display: "flex", gap: "10px" }}>
-            <BtnLink url={"https://codigo369.com/detallecurso/24"} color={"#fff"} bgcolor={"#ff6a00"} titulo={"inscribete aquí"} />
-              <BtnLink url={"https://t.me/ada369react"} color={"#2f2f2f"} bgcolor={"#ffffff"} titulo={"+ grupo telegram"} />
+              <BtnLink url={"/pos"} color={"#fff"} bgcolor={"#ff6a00"} titulo={"Abrir punto de venta"} />
+              <BtnLink url={"/reportes"} color={"#2f2f2f"} bgcolor={"#ffffff"} titulo={"Ver reportes"} />
             </div>
           </LeftSection>
           <RightSection className="right-section">
@@ -130,24 +129,15 @@ export const LandingPagesWelcome = () => {
         <FooterContent>
           <FooterItem>
             <FooterIcon>
-              <img src="https://i.ibb.co/3vfgvTB/mujer-de-negocios.png" />
+              <img src={desoftnicLogo} alt="Desoftnic" />
             </FooterIcon>
             <FooterText>
-              <FooterTextTitle>FRONTEND</FooterTextTitle>
+              <FooterTextTitle>Desoftnic</FooterTextTitle>
               <FooterDescription>
-                React.js | TansTask | Zustand | Styled Components
+                Desarrollo de software | Desarrollo a la medida | Desarrollo de aplicaciones moviles | Automatizaciones con IA
               </FooterDescription>
             </FooterText>
-          </FooterItem>
-          <FooterItem>
-            <FooterIcon>
-              <img src="https://i.ibb.co/4fDChm8/nalga-1.png" />
-            </FooterIcon>
-            <FooterText>
-              <FooterTextTitle>BACKEND</FooterTextTitle>
-              <FooterDescription>PostgreSQL | SUPABASE</FooterDescription>
-            </FooterText>
-          </FooterItem>
+          </FooterItem>          
         </FooterContent>
       </Footer>
     </Container>
