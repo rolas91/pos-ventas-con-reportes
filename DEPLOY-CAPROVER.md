@@ -36,21 +36,26 @@ Esto genera la carpeta `dist/` con las variables `VITE_APP_SUPABASE_*` ya embebi
 
 ### 3. Crear el tar con lo que CapRover necesita
 
-Solo entran **captain-definition** y la carpeta **dist** (sin `.map` para aligerar):
+Se crea un tar cuya **raíz** contiene el contenido de `dist` (index.html, assets, etc.) más `captain-definition`. Así se evita el error "dist: file does not exist" que puede darse en Windows al empaquetar la carpeta `dist` directamente.
 
-**Linux / macOS / Git Bash (Windows):**
-
-```bash
-tar -cvf deploy.tar --exclude='*.map' ./captain-definition ./dist
-```
-
-**PowerShell (Windows):**
+**Forma recomendada: usar el script** (crea el tar correctamente en cualquier OS):
 
 ```powershell
-tar -cvf deploy.tar --exclude='*.map' captain-definition dist
+.\deploy-caprover.ps1
 ```
 
-Si quieres incluir los source maps (para depurar en producción), omite `--exclude='*.map'`.
+**Manual (PowerShell):** construir, luego empaquetar con una carpeta temporal para que la raíz del tar tenga los archivos a servir:
+
+```powershell
+npm run build
+New-Item -ItemType Directory -Force -Path deploy-pack | Out-Null
+Copy-Item captain-definition deploy-pack\
+Copy-Item -Path dist\* -Destination deploy-pack\ -Recurse -Force
+tar -cvf deploy.tar -C deploy-pack .
+Remove-Item -Path deploy-pack -Recurse -Force
+```
+
+**Manual (Linux/macOS):** mismo concepto: copiar contenido de `dist` y `captain-definition` a una carpeta, luego `tar -cvf deploy.tar -C esa-carpeta .`
 
 ### 4. Desplegar con la CLI de CapRover
 
@@ -72,8 +77,8 @@ Tras subir el tar, CapRover construye la imagen (solo copia `dist` a nginx-spa) 
 
 | Archivo | Uso |
 |--------|-----|
-| `captain-definition` | Define la imagen: `socialengine/nginx-spa` + copiar `dist` a `/app`. |
-| `dist/` | Salida de `npm run build` (incluida en el tar; no se sube a Git). |
+| `captain-definition` | Define la imagen: `socialengine/nginx-spa` + `COPY . /app` (el tar lleva el contenido de `dist` en la raíz). |
+| `dist/` | Salida de `npm run build`; su contenido se empaqueta en la raíz del tar (no se sube a Git). |
 
 La imagen usa **socialengine/nginx-spa**, que ya sirve la SPA correctamente (rutas como `/pos`, `/reportes` devuelven `index.html`).
 

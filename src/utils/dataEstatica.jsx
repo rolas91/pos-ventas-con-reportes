@@ -26,11 +26,11 @@ export const DesplegableUser = [
 
 //data SIDEBAR
 export const LinksArray = [
-  {
-    label: "Home",
-    icon: "noto-v1:house",
-    to: "/",
-  },
+  // {
+  //   label: "Home",
+  //   icon: "noto-v1:house",
+  //   to: "/",
+  // },
   {
     label: "Dashboard",
     icon: "fluent-emoji-flat:antenna-bars",

@@ -1,23 +1,24 @@
 import styled from "styled-components";
-export function CardModos({ title, subtitle, img, bgcolor, funcion }) {
+import { Icon } from "@iconify/react";
+
+export function CardModos({ title, subtitle, img, icono, bgcolor, funcion }) {
   return (
     <Container $bgcolor={bgcolor} onClick={funcion}>
       <section className="card-container">
         <article className="content-wrapper">
           <section className="badge-container">
-          
-            <span className="badge-button">{title} </span>
+            <span className="badge-button">{title}</span>
           </section>
           <section className="title-section">
-            <span className="subtitle">{subtitle} </span>
+            <span className="subtitle">{subtitle}</span>
           </section>
         </article>
         <article className="image-container">
-          <img
-            className="character-image"
-            src={img}
-            alt="My Hero Academia character"
-          />
+          {icono ? (
+            <Icon icon={icono} className="icon-image" />
+          ) : (
+            <img className="character-image" src={img} alt={title} />
+          )}
         </article>
       </section>
     </Container>
@@ -83,5 +84,10 @@ const Container = styled.section`
   .character-image {
     height: 100%;
     position: relative;
+  }
+
+  .icon-image {
+    font-size: 50px;
+    color: #fff;
   }
 `;

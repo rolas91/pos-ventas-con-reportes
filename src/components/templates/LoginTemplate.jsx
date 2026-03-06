@@ -71,7 +71,7 @@ export function LoginTemplate() {
               title={"Super admin"}
               subtitle={"crea y gestiona tu empresa"}
               bgcolor={"#ed7323"}
-              img={"https://i.ibb.co/TDXYj7r9/rey.png"}
+              icono={"fluent-emoji:briefcase"}
               funcion={() => {
                 setStateModo("superadmin");
                 setStateModos(!stateModos);
@@ -81,7 +81,7 @@ export function LoginTemplate() {
               title={"Empleado"}
               subtitle={"vende y crece"}
               bgcolor={"#542a1b"}
-              img={"https://i.ibb.co/ksfCmJyy/casco.png"}
+              icono={"fluent-emoji:money-with-wings"}
               funcion={() => {
                 setStateModo("empleado");
                 setStateModos(!stateModos);

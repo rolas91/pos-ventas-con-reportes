@@ -28,7 +28,7 @@ export function Sidebar({ state, setState }) {
           <div className="imgcontent">
             <img src={v.logo} />
           </div>
-          <h2>Desoftnic - POS WEB</h2>
+          <h2>POS-Desoftnic</h2>
         </div>
         {LinksArray.map(({ icon, label, to }) => (
           <div
@@ -133,7 +133,7 @@ const Container = styled.div`
       }
     }
     h2 {
-      color: #f88533;
+      color: ${({ theme }) => theme.text};
       display: ${({ $isopen }) => ($isopen === "true" ? `block` : `none`)};
     }
   }

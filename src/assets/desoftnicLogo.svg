@@ -1,0 +1,79 @@
+<div style="width:360px">
+<svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+
+<linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#2563EB"/>
+<stop offset="100%" stop-color="#06B6D4"/>
+</linearGradient>
+
+<style>
+.logoText{
+font-family:'Inter','Segoe UI',sans-serif;
+font-weight:700;
+letter-spacing:3px;
+}
+.subText{
+font-family:'Inter','Segoe UI',sans-serif;
+font-size:14px;
+letter-spacing:2px;
+fill:#64748B;
+}
+</style>
+
+</defs>
+
+<!-- ICONO ESCUDO TECNOLOGICO -->
+
+<g transform="translate(60,25)">
+
+<!-- escudo -->
+
+<polygon
+points="60,10 105,90 15,90"
+fill="none"
+stroke="url(#techGradient)"
+stroke-width="5"
+/>
+
+<!-- circuitos -->
+
+<circle cx="60" cy="40" r="5" fill="url(#techGradient)"/>
+
+<line x1="60" y1="40" x2="85" y2="70"
+stroke="url(#techGradient)"
+stroke-width="3"/>
+
+<circle cx="85" cy="70" r="4" fill="url(#techGradient)"/>
+
+<line x1="60" y1="40" x2="35" y2="70"
+stroke="url(#techGradient)"
+stroke-width="3"/>
+
+<circle cx="35" cy="70" r="4" fill="url(#techGradient)"/>
+
+</g>
+
+<!-- TEXTO -->
+
+<g class="logoText">
+
+<text x="170" y="80" font-size="46" fill="#0F172A">
+DESOFT
+</text>
+
+<text x="350" y="80" font-size="46" fill="url(#techGradient)">
+NIC
+</text>
+
+</g>
+
+<!-- tagline -->
+
+<text x="170" y="110" class="subText">
+SOFTWARE DEVELOPMENT
+</text>
+
+</svg>
+</div>

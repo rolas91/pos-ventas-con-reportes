@@ -4,7 +4,7 @@ import { CardFuncion } from "./CardFuncion";
 import { Device } from "../../../styles/breakpoints";
 import ScrollReveal from "scrollreveal";
 import { BtnLink } from "../../moleculas/BtnLink";
-import desoftnicLogo from '../../../assets/desoftnicLogo.png';
+import {v} from "../../../styles/variables";
 
 export const LandingPagesWelcome = () => {
   useEffect(() => {
@@ -125,14 +125,14 @@ export const LandingPagesWelcome = () => {
       </ContentSection>
 
       <Footer className="footer-section">
-        <FooterTitle>Tecnologias utilizadas:</FooterTitle>
+        {/* <FooterTitle>Tecnologias utilizadas:</FooterTitle> */}
         <FooterContent>
           <FooterItem>
             <FooterIcon>
-              <img src={desoftnicLogo} alt="Desoftnic" />
+              <img src={v.logo} alt="Desoftnic" />           
             </FooterIcon>
             <FooterText>
-              <FooterTextTitle>Desoftnic</FooterTextTitle>
+              {/* <FooterTextTitle>Desoftnic</FooterTextTitle> */}
               <FooterDescription>
                 Desarrollo de software | Desarrollo a la medida | Desarrollo de aplicaciones moviles | Automatizaciones con IA
               </FooterDescription>

@@ -36,7 +36,7 @@ export function FooterPos() {
           bgcolor="#f44141"
           color="#fff"
           funcion={mutateEliminarVenta}
-          icono={<Icon icon="fluent-emoji-flat:skull" />}
+          icono={<Icon icon="weui:delete-filled" />}
           titulo="Eliminar venta"
         />
         <Btn1
