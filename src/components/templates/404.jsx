@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { v } from "../../styles/variables";
 export function PageNot() {
   return (
     <Container>
@@ -9,8 +9,7 @@ export function PageNot() {
             <span className="home__subtitle">página en </span>
             <h1 className="home__title">Construcción</h1>
             <p className="home__description">
-              Esta página se encuentra en <br /> construcción, pequeño
-              cerdecillo.
+              Esta página se encuentra en <br /> construcción, muy pronto estará disponible.
             </p>
             <a href="/" className="home__button">
               VOLVER A HOME
@@ -18,7 +17,7 @@ export function PageNot() {
           </div>
 
           <div className="home__img">
-            <img src="https://i.ibb.co/J3ScNtK/roshi.png" alt="" />
+            <img src={v.logo} alt="" />
           </div>
         </div>
       </section>

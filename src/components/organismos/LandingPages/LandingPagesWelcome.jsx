@@ -38,7 +38,7 @@ export const LandingPagesWelcome = () => {
             <h1>Punto de venta para tu empresa</h1>
             <Step>
               <IconPlaceholder>
-                <img src="https://i.ibb.co/3dZfQzF/caja-registradora.png" alt="Ventas" />
+                <img src={v.cajaRegistradora} alt="Ventas" />
               </IconPlaceholder>
               <Text>
                 <Title>Vende más rápido</Title>
@@ -49,7 +49,7 @@ export const LandingPagesWelcome = () => {
             </Step>
             <Step>
               <IconPlaceholder>
-                <img src="https://qkzybkelsdmoezaaypou.supabase.co/storage/v1/object/public/imagenes/modulos/almacen.png" alt="Inventario" />
+                <img src={v.almacen} alt="Inventario" />
               </IconPlaceholder>
               <Text>
                 <Title>Inventario bajo control</Title>
@@ -60,7 +60,7 @@ export const LandingPagesWelcome = () => {
             </Step>
             <Step>
               <IconPlaceholder>
-                <img src="https://i.ibb.co/3vfgvTB/mujer-de-negocios.png" alt="Reportes" />
+                <img src={v.mujer} alt="Reportes" />
               </IconPlaceholder>
               <Text>
                 <Title>Decisiones con datos</Title>
@@ -82,14 +82,14 @@ export const LandingPagesWelcome = () => {
                 bgcontentimagen={"#fccdb8"}
                 left={"-50px"}
                 title={"Multi-empresa"}
-                imagen={"https://i.ibb.co/HCF7jnx/escaparate.png"}
+                imagen={v.escaparate}
               />
               <CardFuncion
                 top="110px"
                 bgcontentimagen={"#e3d4cc"}
                 left={"-20px"}
                 title={"Multi-sucursal"}
-                imagen={"https://i.ibb.co/MV6xZz4/franquicia.png"}
+                imagen={v.franquicia}
               />
               <CardFuncion
                 top="210px"
@@ -97,7 +97,7 @@ export const LandingPagesWelcome = () => {
                 left={"-50px"}
                 title={"Multi-caja"}
                 imagen={
-                  "https://i.ibb.co/3dZfQzF/caja-registradora.png"
+                  v.caja
                 }
               />
               <CardFuncion
@@ -106,7 +106,7 @@ export const LandingPagesWelcome = () => {
                 left={"-20px"}
                 title={"Multi-almacen"}
                 imagen={
-                  "https://qkzybkelsdmoezaaypou.supabase.co/storage/v1/object/public/imagenes/modulos/almacen.png"
+                 v.almacen
                 }
               />
                <CardFuncion
@@ -116,7 +116,7 @@ export const LandingPagesWelcome = () => {
                 title={"Imprime directo"}
                 subtitle={"sin cuadro de diálogo"}
                 imagen={
-                  "https://qkzybkelsdmoezaaypou.supabase.co/storage/v1/object/public/imagenes/modulos/impresora.png"
+                  v.impresora
                 }
               />
             </MockupImage>
@@ -179,7 +179,7 @@ const LeftSection = styled.div`
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  h1 {
+  h1 { 
     text-align: center;
     font-size:35px;
   }

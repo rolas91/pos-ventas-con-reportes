@@ -28,7 +28,6 @@ export function TotalPos() {
   return (
     <Container>
     <section className="imagen">
-        {/* <img src="https://i.ibb.co/HdYgDdp/corazon-2.png" /> */}
       </section>
       <section className="contentTotal">
         <section className="contentTituloTotal">

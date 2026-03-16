@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { useRef, useState } from "react";
 import styled from "styled-components";
 import { useGlobalStore } from "../store/GlobalStore";
+import { v } from "../styles/variables";
 export const ImageSelector = ({ fileUrl }) => {
   const fileInputRef = useRef(null);
   const { setFile, setFileUrl } = useGlobalStore();
@@ -23,7 +24,7 @@ export const ImageSelector = ({ fileUrl }) => {
       <ImageWrapper>
         <Avatar
           src={
-            fileUrl !== "-" ? fileUrl : "https://i.ibb.co/39y0kysq/subir.png"
+            fileUrl !== "-" ? fileUrl : v.upload
           }
           alt="Selected"
         />

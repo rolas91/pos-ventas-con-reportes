@@ -13,6 +13,16 @@ import { FaReact } from "react-icons/fa";
 import { BsArrowDown, BsArrowUpShort } from "react-icons/bs";
 import { FaBalanceScale } from "react-icons/fa";
 import logo from "../assets/logo.svg";
+import escaparate from "../assets/escaparate.png";
+import franquicia from "../assets/franquicia.png";
+import caja from "../assets/caja-del-paquete.png";
+import almacen from "../assets/almacen.png";
+import mujer from "../assets/mujer-de-negocios.png";
+import bride from "../assets/bride.png";
+import impresora from "../assets/impresora.png";
+import cajaRegistradora from "../assets/caja-registradora.png";
+import piensaFueraDeLaCaja from "../assets/piensa-fuera-de-la-caja.png";
+import upload from "../assets/subir.png";
 import { FcGoogle } from "react-icons/fc";
 
 import { RiCloseLine } from "react-icons/ri";
@@ -73,7 +83,16 @@ export const v = {
   xlSpacing: `32px`,
   xxlSpacing: `48px`,
   borderRadius: `6px`,
-
+  escaparate: escaparate,
+  franquicia: franquicia,
+  caja: caja,
+  almacen: almacen,
+  mujer: mujer,
+  impresora: impresora,
+  upload: upload,
+  bride: bride,
+  cajaRegistradora: cajaRegistradora,
+  piensaFueraDeLaCaja: piensaFueraDeLaCaja,
   paletacolores: CiPalette,
   emoji: BsEmojiLaughing,
   iconeditarTabla: RiEditLine,

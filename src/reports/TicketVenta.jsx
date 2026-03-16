@@ -1,5 +1,7 @@
 import { numeroALetras, urlToBase64 } from "../utils/Conversiones";
 import createPdf from "../utils/CreatePdf";
+import { v } from "../styles/variables";
+
 const TicketVenta = async (output, data) => {
   const fechaCompleta = data.dataventas?.fecha;
   const fechaObj = new Date(fechaCompleta);
@@ -20,7 +22,7 @@ const TicketVenta = async (output, data) => {
   });
   const logoempresa = await urlToBase64(
     data.dataempresa?.logo === "-"
-      ? "https://i.ibb.co/TxhZ45j7/bride.png"
+      ? v.bride
       : data.dataempresa?.logo
   );
   const productTableBody = [

@@ -31,10 +31,15 @@ export const LinksArray = [
   //   icon: "noto-v1:house",
   //   to: "/",
   // },
+  // {
+  //   label: "Dashboard",
+  //   icon: "fluent-emoji-flat:antenna-bars",
+  //   to: "/dashboard",
+  // },
   {
     label: "Dashboard",
     icon: "fluent-emoji-flat:antenna-bars",
-    to: "/dashboard",
+    to: "/",
   },
   {
     label: "VENDER",
@@ -90,14 +95,14 @@ export const DataModulosConfiguracion =[
   {
     title:"Productos",
     subtitle:"registra tus productos",
-    icono:"https://i.ibb.co/85zJ6yG/caja-del-paquete.png",
+    icono:v.caja,
     link:"/configurar/productos",
    
   },
   {
     title:"Personal",
     subtitle:"ten el control de tu personal",
-    icono:"https://i.ibb.co/5vgZ0fX/hombre.png",
+    icono:v.hombre,
     link:"/configurar/usuarios",
    
   },
@@ -105,21 +110,21 @@ export const DataModulosConfiguracion =[
   {
     title:"Tu empresa",
     subtitle:"configura tus opciones básicas",
-    icono:"https://i.ibb.co/x7mHPgm/administracion-de-empresas.png",
+    icono:v.administracion,
     link:"/configurar/empresa",
     
   },
   {
     title:"Categoria de productos",
     subtitle:"asigna categorias a tus productos",
-    icono:"https://i.ibb.co/VYbMRLZ/categoria.png",
+    icono:v.categoria,
     link:"/configuracion/categorias",
     
   },
   {
     title:"Marca de productos",
     subtitle:"gestiona tus marcas",
-    icono:"https://i.ibb.co/1qsbCRb/piensa-fuera-de-la-caja.png",
+    icono:v.piensaFueraDeLaCaja,
     link:"/configurar/marca",
    
   },
